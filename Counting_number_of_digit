@@ -1,0 +1,24 @@
+// Write a program to find the number of digits in a number
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter a number : ";
+    cin>>n;
+
+    // using for loop
+    int counta=0;
+    int newnum=n;
+    while(newnum){
+        newnum/=10;
+        counta++;
+    }
+    cout<<"number of digits are : "<<counta<<endl;
+    
+    // other method uding log10(n)+1;
+    int countb=(int)(log10(n)+1);
+    cout<<"Number of digits are : "<<countb<<endl;
+    
+    return 0;
+}
