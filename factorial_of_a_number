@@ -3,6 +3,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// using for loop
 int factorial(int n){
     int fact=1;
     for(int i=2;i<=n;i++){
@@ -11,10 +12,19 @@ int factorial(int n){
     return fact;
 }
 
+//using recursion
+int factorial2(int n){
+    if(n==0){
+        return 1;
+    }
+    return n*factorial2(n-1);
+}
+
 int main(){
     int n;
     cout<<"Enter a number : ";
     cin>>n;
     cout<<"The factcorial of "<<n<<" is "<<factorial(n)<<endl;
+    cout<<"The factcorial of "<<n<<" is "<<factorial2(n)<<endl;
     return 0;
 }
