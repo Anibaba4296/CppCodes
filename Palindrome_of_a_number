@@ -1,0 +1,25 @@
+// Find if the number is a palindrome or not
+
+#include<bits/stdc++.h>
+using namespace std;
+int palindrome(int n){
+    int rem,newNum=0;
+    while(n){
+        rem=n%10;
+        newNum=newNum*10 + rem;
+        n=n/10;
+    }
+    return newNum;
+}
+int main(){
+    int n;
+    cout<<"Enter a number : ";
+    cin>>n;
+    int newNum=palindrome(n);
+    if(newNum == n){
+        cout<<n<<" is a palindrome"<<endl;
+    }else{
+        cout<<n<<" is not a palindrome"<<endl;
+    }
+    return 0;
+}
