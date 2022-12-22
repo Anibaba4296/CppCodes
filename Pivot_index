@@ -1,0 +1,35 @@
+// find the pivot index in the given array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"Enter a value : ";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter the elements : ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum=sum+arr[i];
+    }
+    int suml=0;
+    int ans=-1;
+    for(int i=0;i<n;i++){
+        if(suml==sum-arr[i]-suml){
+            ans=i;
+            break;
+        }else{
+            suml=suml+arr[i];
+        }
+    }
+    if(ans>=0){
+        cout<<"Pivot index is : "<<ans<<endl;
+    }else{
+        cout<<"No pivot index found"<<endl;
+    }
+    return 0;
+}
