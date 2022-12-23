@@ -1,0 +1,31 @@
+// Find the HCF of two numbers :)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a,b;
+    cout<<"Enter two numbers : ";
+    cin>>a>>b;
+
+    // Method 1:
+    int n=min(a,b);
+    while(n>0){
+        if(a%n==0 && b%n==0){
+            break;
+        }else{
+            n--;
+        }
+    }
+
+    // Method 2: 
+    while(a!=b){
+        if(a>b){
+            a=a-b;
+        }else{
+            b=b-a;
+        }
+    }
+    cout<<"The GCD is : "<<n<<endl;
+    cout<<"The GCD is : "<<a<<endl;
+    return 0;
+}
