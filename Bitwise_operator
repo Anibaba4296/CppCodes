@@ -1,0 +1,17 @@
+// Bitwise operators
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cin>>a>>b;
+    cout<<"a&b : "<<(a&b)<<endl;     // bitwise AND
+    cout<<"a|b : "<<(a|b)<<endl;     // bitwise OR
+    cout<<"~a : "<<(~a)<<endl;       // bitwise NOT
+    cout<<"a^b : "<<(a^b)<<endl;     // bitwise XOR
+    cout<<(17<<1)<<endl;    // Bitwise left-shift
+    cout<<(17<<2)<<endl;    // Bitwise left-shift
+    cout<<(17>>1)<<endl;    // Bitwise right-shift
+    cout<<(17>>2)<<endl;    // Bitwise right-shift
+    return 0;
+}
