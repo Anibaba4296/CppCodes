@@ -1,0 +1,18 @@
+// Calculate the hammig length or number of 1's in the number
+// Note: it will take int value and then convert it into binary then count zeros
+#include<iostream>
+using namespace std;
+int main(){
+    unsigned int n;
+    cin>>n;
+    int count =0;
+        while(n!=0){
+            if(n&1){
+            count++;
+        }
+            n=n>>1;
+            
+        }
+    cout<<"Number of 1's are : "<<count<<endl;
+    return 0;
+}
