@@ -1,0 +1,25 @@
+// Find how minimum number of notes to form up the given amount. Notes are of 100,50,20,10,5,1
+
+#include<iostream>
+using namespace std;
+int main(){
+    int amt;
+    cout<<"Enter the amount : ";
+    cin>>amt;
+    int a100=amt/100;
+    int b=amt%100;
+    int c50=b/50;
+    int d=b%50;
+    int e10=d/10;
+    int f=d%10;
+    int g5=f/5;
+    int h=f%5;
+    int sum=a100+c50+e10+g5+h;
+    cout<<"100 rs note : "<<a100<<endl;
+    cout<<"50 rs note : "<<c50<<endl;
+    cout<<"10 rs note : "<<e10<<endl;
+    cout<<"5 rs coin : "<<g5<<endl;
+    cout<<"1 rs coin : "<<h<<endl;
+    cout<<"Total number of notes : "<<sum<<endl;
+    return 0;
+}
