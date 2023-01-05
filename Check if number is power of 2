@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter a number : ";
+    cin>>n;
+    int count=0;
+    // count != 1 || count == 0 ==> not power of 2
+    // count == 1 ==> power of 2  => if set bits == 1
+    while(n!=0){
+        if(n&1){
+            count++;
+        }
+        n=n>>1;
+    }
+    if(count==1){
+        cout<<"It is power to 2"<<endl;
+    }else{
+        cout<<"It is not power to 2"<<endl;
+    }
+    return 0;
+}
