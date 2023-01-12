@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int a){
+    if(a<=1){
+        return false;
+    }
+    for(int i=2;i*i<=a;i++){
+        if(a%i==0){
+            return false;
+        }
+        
+    }
+       return true;
+} 
+// Method 2
+
+// void method2(int n){
+//     vector<bool>isPrime(n+1,true);
+//     for(int i=2;i<=n;i++){
+//         if(i!=2 && i!=3 && i!=5){
+//             if(i%2==0 || i%3==0 || i%5==0){
+//                 isPrime[i]=false;
+//             }
+//         }
+//     }
+//     for(int i=2;i<=n;i++){
+//         if(isPrime[i]){
+//             cout<<i<<" ";
+//         }
+//     }
+// }
+
+int main(){
+    int n;
+    cin>>n;
+    for(int i=2;i<=n;i++){
+        if(prime(i)){
+            cout<<i<<" ";
+        }
+    }
+    cout<<endl;
+    //method2(n);
+    return 0;
+}
