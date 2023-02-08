@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    int arr[10000];
+    
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    sort(arr,arr+n);
+
+    int countArr[10000]={0};
+    int j=0;
+    for(int i=0;i<n-1;i++){
+        if(arr[i]==arr[i+1]){
+            countArr[j]++;
+        }else{
+            j++;
+        }
+    }
+    //increment j by 1;
+    j++;
+
+    sort(countArr,countArr+j);
+    bool ans=false;
+    for(int i=0;i<j-1;i++){
+        if(countArr[i] == countArr[i+1]){
+            ans=false;
+            break;
+        }else{
+            ans=true;
+        }
+    }
+    if(ans){
+        cout<<"Unique occurances"<<endl;
+    }else{
+        cout<<"Non-Unique occurances"<<endl;
+    }
+    
+}
