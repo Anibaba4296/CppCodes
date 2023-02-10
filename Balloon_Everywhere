@@ -1,0 +1,51 @@
+/*
+    Bob is very fond of balloons. Once he visited an amusement park with his mother. The mother told Bob that she would buy him a balloon only if he answer her problem right. She gave Bob a string S [contains only lowercase characters] and asked him to use the characters of string to form as many instances of the word "balloon" as possible. Return the maximum number of instances that can be formed.
+
+    Help Bob to solve the problem. 
+
+    Example:
+    Input:
+        S: loonbalxballpoon
+    Output: 2
+        Explanation:
+        Here, the number of occurence of 'b' = 2
+        of occurence of 'a' = 2
+        of occurence of 'l' = 4
+        of occurence of 'o' = 4
+        of occurence of 'n' = 2
+        So, we can form 2 "balloon" using the letters. 
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int words(string str){
+    int n=str.length();
+    int count_b=0,count_a=0,count_l=0,count_o=0,count_n=0;
+    for(int i=0;i<n;i++){
+        if(str[i]=='b'){
+            count_b++;
+        }
+        if(str[i]=='a'){
+            count_a++;
+        }
+        if(str[i]=='l'){
+            count_l++;
+        }
+        if(str[i]=='o'){
+            count_o++;
+        }
+        if(str[i]=='n'){
+            count_n++;
+        }
+    }
+    int ans = min(count_b,min(count_a,min(count_l/2,min(count_o/2,count_n))));
+    return ans;
+}
+int main(){
+    string str="";
+    cout<<"Enter a string : ";
+    cin>>str;
+    int ans=words(str);
+    cout<<"No. of ballons formed : "<<ans<<endl;
+
+}
