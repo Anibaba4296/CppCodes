@@ -1,0 +1,27 @@
+// CodeChef question code : HORSES
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    int s[n];
+	    for(int i=0;i<n;i++){
+	        cin>>s[i];
+	    }
+	    sort(s,s+n);
+	    int mindiff = INT_MAX;
+	    for(int i=0;i<n-1;i++){
+	        int dif = s[i+1] - s[i];
+	        mindiff = min(dif,mindiff);
+	    }
+	    cout<<mindiff<<endl;    
+	}
+	return 0;
+}
